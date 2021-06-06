@@ -1,0 +1,116 @@
+@media screen and (max-width: 700px) {
+  .skip-link:focus {
+    top: auto;
+    color: #fff;
+    transform: translateY(0%);
+    top: 500px;
+  }
+
+  .header {
+    background-color: #07349b;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #07349b;
+    width: 200px;
+    position: absolute;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-200px, 0);
+    transform: translate(-200px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__list {
+    text-align: left;
+    padding: 0px;
+    width: 200px;
+  }
+
+  .nav__item {
+    /* display: list-item; */
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav__title {
+    display: none;
+  }
+
+  .post-item__title {
+    font-size: 18px;
+  }
+
+  .post-item__description {
+    font-size: 10px;
+  }
+  .hero__text h1 {
+    font-size: 30px;
+  }
+
+  .hero__text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .header {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+
+  .nav__title .nav__item {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav__list {
+    padding-right: 0;
+  }
+
+  .nav__item {
+    width: 30%;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .nav__list {
+    padding-right: 30px;
+  }
+  .nav__item {
+    width: 20%;
+  }
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
