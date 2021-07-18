@@ -1,6 +1,23 @@
 /* img {
     display: block;
 } */
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -61,7 +78,7 @@ body {
   margin: 1em 0.25em;
   display: inline-block;
   color: #fff;
-  font-family: "Nunito Sans";
+  font-family: "Sniglet", cursive;
 }
 
 .header__menu {
@@ -74,6 +91,7 @@ body {
   text-align: left;
   color: #fff;
   text-decoration: none;
+  font-family: "Sniglet", cursive;
 }
 
 /* Navbar */
@@ -96,6 +114,7 @@ body {
 
 .nav__title .nav__item a {
   color: #fff;
+  font-family: "Sniglet", cursive;
 }
 
 .nav__list {
@@ -130,7 +149,15 @@ body {
 /* Hero bg */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../public/images/heros/hero-image_4.jpg");
+    url("/images/hero-image_4-large.jpg");
+  background-image: -webkit-image-set(
+    url("/images/hero-image_4-small.jpg") 1x,
+    url("/images/hero-image_4-large.jpg") 2x
+  );
+  background-image: image-set(
+    url("/images/hero-image_4-small.jpg") 1x,
+    url("/images/hero-image_4-large.jpg") 2x
+  );
   height: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,10 +176,12 @@ body {
 
 .hero__text h1 {
   font-size: 50px;
+  font-family: "Sniglet", cursive;
 }
 
 .hero__text p {
   font-size: 20px;
+  font-family: "Sniglet", cursive;
 }
 
 /* Main content */
@@ -170,7 +199,7 @@ main {
   font-size: 30px;
   text-align: center;
   color: #3a4166;
-  font-family: "Nunito Sans";
+  font-family: "Sniglet", cursive;
   font-weight: bold;
 }
 
@@ -218,6 +247,233 @@ main {
 .post-item__thumbnail {
   width: 100%;
   height: 240px;
+}
+
+/* Detail */
+.title-container-detail {
+  color: #07349b;
+  text-align: center;
+  font-size: 35px;
+  margin: 40px 0px;
+  font-family: "Sniglet", cursive;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px !important;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.detail-container__image img {
+  width: 93%;
+  border-radius: 20px;
+}
+
+.detail-img-mobile {
+  display: none;
+}
+
+.card-detail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-detail:hover {
+  box-shadow: 0 8px 16px 0 rgba(84, 76, 76, 0.2);
+}
+
+.detail-container__info {
+  padding: 20px 30px;
+}
+
+.detail-info__title h3 {
+  font-size: 20px;
+  color: #07349b;
+  font-family: "Sniglet", cursive;
+}
+
+.detail-info__title a {
+  float: right;
+  text-decoration: none !important;
+}
+
+.detail-info__address {
+  font-size: 15px;
+  margin: 5px 0px;
+}
+.detail-info__desc {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* .menu-detail {
+  margin: 20px 0px;
+} */
+
+.menu-title {
+  font-size: 25px;
+  color: #07349b;
+  text-align: center;
+  padding-top: 50px;
+  font-family: "Sniglet", cursive;
+}
+.menu-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  margin-top: 30px;
+}
+
+.menu-foods p {
+  font-size: 18px;
+  color: #3a4166;
+  font-weight: bold;
+  font-family: "Sniglet", cursive;
+}
+
+.menu-drinks p {
+  font-size: 18px;
+  color: #3a4166;
+  font-weight: bold;
+  font-family: "Sniglet", cursive;
+}
+
+.food-list {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.food-list li {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Sniglet", cursive;
+}
+
+.drink-list {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.drink-list li {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Sniglet", cursive;
+}
+
+/* REVIEW */
+.card-review {
+  margin-top: 30px;
+}
+
+.card-review__title h4 {
+  font-size: 20px;
+  color: #07349b;
+  font-weight: bold;
+  font-family: "Sniglet", cursive;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.form-group {
+  margin: 20px 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-family: "Sniglet", cursive;
+  margin-bottom: 10px;
+}
+
+.review-input {
+  outline: none !important;
+  border: none !important;
+  border-radius: 50px;
+  width: 80%;
+  background: no-repeat bottom, 50% calc(100% - 1px);
+  background-image: none, none;
+  background-size: auto, auto;
+  background-size: 0 100%, 100% 100%;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  transition: background 0s ease-out;
+  background-image: linear-gradient(0deg, #07349b 2px, rgba(156, 39, 176, 0) 0),
+    linear-gradient(0deg, #d2d2d2 1px, hsla(0, 0%, 82%, 0) 0);
+}
+
+.review-input:focus {
+  outline: none !important;
+  border: none !important;
+  border-color: #07349b !important;
+  background-size: 100% 100%, 100% 100% !important;
+  transition-duration: 0.3s !important;
+}
+
+textarea {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+  border-color: -moz-use-text-color #ffffff #ffffff -moz-use-text-color;
+  border-image: none;
+  border-style: none solid solid none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+  color: #555555;
+  resize: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  /* transition: background-color 0.2s ease 0s; */
+  transition: background 0s ease-out;
+}
+
+textarea:focus {
+  background: none repeat scroll 0 0 #ffffff;
+  outline-width: 0;
+  transition-duration: 0.3s !important;
+}
+
+.review-submit {
+  text-transform: uppercase;
+  padding: 5px 25px !important;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background: linear-gradient(50deg, #4865a9, #07349b) !important;
+  color: #fff;
+  border: none !important;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.review-container {
+  display: grid !important;
+  /* grid-auto-flow: column !important; */
+  grid-template-columns: auto !important;
+  grid-auto-rows: auto !important;
+}
+
+.review-list_head {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #2e58ba;
+}
+
+.review-list_head .review-date {
+  text-align: right;
+  float: right;
 }
 
 /* post star rating */
@@ -295,4 +551,65 @@ footer {
 .footer__desc {
   color: #fff;
   font-size: 16px;
+}
+
+/* spinner */
+.spinner-container {
+  width: 100%;
+  display: grid;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #07349b;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #07349b transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Like */
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #07349b;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
